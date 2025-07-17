@@ -3,12 +3,10 @@ class Solution {
         String answer = "";
         
         for(int i = 0; i < my_string.length(); i++){
-            if(my_string.charAt(i) == 'a') continue;
-            else if(my_string.charAt(i) == 'e') continue;
-            else if(my_string.charAt(i) == 'i') continue;
-            else if(my_string.charAt(i) == 'o') continue;
-            else if(my_string.charAt(i) == 'u') continue;
-            answer += my_string.charAt(i);
+            switch (my_string.charAt(i)){
+                case 'a','e','i','o','u' : break;
+                default : answer += my_string.charAt(i);       
+            }
         }
         return answer;
     }
