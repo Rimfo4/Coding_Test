@@ -5,15 +5,13 @@ class Solution {
         final int att = 3;
         final int work = 1;
         
-        if(hp >= 1){
-            if(hp >= 5){
-                answer += hp / king;
-                hp %= king;
-            }
-            if(hp >= 3){
-                answer += hp / att;
-                hp %= att;
-            }
+        if(hp >= 5){
+            answer += hp / king;
+            hp %= king;
+        }
+        if(hp >= 3){
+            answer += hp / att;
+            hp %= att;
         }
         answer += hp;
     return answer;
