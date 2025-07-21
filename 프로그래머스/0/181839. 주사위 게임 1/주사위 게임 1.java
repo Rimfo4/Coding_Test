@@ -7,10 +7,8 @@ class Solution {
         else if(a%2==1 || b%2==1)
             sum = 2*(a + b);
         else {
-            if(a < b) 
-                sum = b - a;
-            else if(a > b) 
-                sum = a - b;
+            if(a < b) sum = b - a;
+            else if(a > b) sum = a - b;
         }
         return sum;
     }
