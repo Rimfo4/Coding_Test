@@ -2,7 +2,6 @@ class Solution {
     public int solution(int n) {
         int answer = 0;
         int cnt = 0;
-        
         int i = n;
         if(n == 0) answer = 0;
         else{
@@ -32,22 +31,6 @@ class Solution {
                 cnt--;
             }
         }
-        // if(n > 1000){
-        //     answer += n / 1000;
-        //     n = n % 1000;
-        // }
-        // if(n > 100){
-        //     answer += n / 100;
-        //     n = n % 100;
-        // }
-        // if(n > 10){
-        //     answer += n / 10;
-        //     n = n % 10;
-        // }
-        // if(n > 1){
-        //     answer += n / 1;
-        //     n = n % 1;
-        // }
         return answer;
     }
 }
