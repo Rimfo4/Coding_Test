@@ -1,15 +1,20 @@
-import java.util.*;
 class Solution {
     public int solution(String[] spell, String[] dic) {
         int answer = 2;
+        //소문자이니까 아스키코드로 비교 해보기.
+        int ascii = 0;
+        for(int i = 0; i < spell.length; i++){
+            ascii += spell[i].charAt(0)-96;
+        }
+        int dicAsc = 0;
         for(int i = 0; i < dic.length; i++){
-            if(dic[i].length() == spell.length){
-                String str = "";
-                for(int j = 0; j < dic[i].length(); j++){
-                    str += dic[i].charAt(j);   
+            String str = dic[i];
+            if(str.length() == spell.length){
+                for(int j = 0; j < spell.length; j++){
+                    dicAsc += str.charAt(j) - 96;
                 }
-                System.out.println(Arrays.sort(str));
-                // if(Arrays.sort(str).equlse(Arrays.sort(dic[i]) ) ) answer = 1;
+                if(dicAsc == ascii) return 1;
+                else dicAsc = 0;
             }
         }
         return answer;
