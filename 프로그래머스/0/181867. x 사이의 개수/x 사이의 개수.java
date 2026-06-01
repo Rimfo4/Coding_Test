@@ -5,7 +5,6 @@ class Solution {
             if(myString.charAt(i) == 'x') cnt++;
         }
         int[] answer = new int[cnt];
-        
         cnt = 0;
         int cnt2 = 0;
         for(int i = 0; i < myString.length(); i++){
